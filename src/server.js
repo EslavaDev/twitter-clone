@@ -11,7 +11,7 @@ async function app(){
     try {
         await nextApp.prepare()
         expressApp.all('*', (req, res) => handle(req, res))
-        await expressApp.listen('3000')
+        await expressApp.listen('5000')
     } catch (error) {
         console.error(error)
     }
