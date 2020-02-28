@@ -1,6 +1,8 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import styled from 'styled-components'
+import { useSelector } from 'react-redux'
+import { getSearch } from '../store/layout/selectors'
 
 const Title = styled.div`
   font-size: 50px;
@@ -21,8 +23,10 @@ const Title = styled.div`
 
 const Index = () => {
     const router = useRouter()
+    const selector = useSelector(getSearch)
     const handleclick = () => {
-        router.push('/about')
+        console.log(selector);
+        // router.push('/about')
     }
 return <Title>
     <h1>My page</h1>
