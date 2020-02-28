@@ -1,0 +1,35 @@
+{
+  "name": "twitter-clone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "babel-node src/server.js",
+    "build": "next build",
+    "start": "cross-env NODE_ENV=production babel-node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EslavaDev/twitter-clone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EslavaDev/twitter-clone/issues"
+  },
+  "homepage": "https://github.com/EslavaDev/twitter-clone#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "next": "^9.2.2",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "styled-components": "^5.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.6",
+    "@babel/node": "^7.8.4",
+    "babel-plugin-styled-components": "^1.10.7",
+    "babel-preset-next": "^1.2.0",
+    "cross-env": "^7.0.0"
+  }
+}
