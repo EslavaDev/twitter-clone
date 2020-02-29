@@ -5,6 +5,8 @@ import React from 'react'
 import { ThemeProvider } from 'styled-components'
 import { AppStore } from '../store';
 
+import 'semantic-ui-css/semantic.min.css'
+
 const theme = {
   colors: {
     primary: '#0070f3',
