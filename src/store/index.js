@@ -2,7 +2,8 @@ import { createStore } from 'redux';
 import { AppReducers } from './reducers';
 import { AppMiddlewares } from './middlewares';
 
-const store = createStore(AppReducers(), AppMiddlewares());
 
-export const AppStore = store;
+export const AppStore = (initialState = {}) => {
+    return createStore(AppReducers(), initialState, AppMiddlewares())
+};
 
