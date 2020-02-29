@@ -81,7 +81,7 @@ return (
         <Icon name='user outline' />
         Perfil
     </Menu.Item>
-    <Button fluid >TWITTEAR</Button>
+    <Button size="big" fluid >TWITTEAR</Button>
   </Menu>
 
     </DivMenuLeftStyled>
