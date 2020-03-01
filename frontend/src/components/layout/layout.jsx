@@ -7,6 +7,7 @@ import TT from '../../../public/twitter-image.png'
 import { getSearch } from "../../store/layout/selectors";
 import { GridColumnHeaderStyled, GridHeaderStyled, InputSearchStyled } from "./style";
 import { MenuLeft } from "../menu";
+import { Tendencias } from "../tendencias";
 
 
 export default function Layout(props) {
@@ -37,8 +38,8 @@ export default function Layout(props) {
       <GridColumnHeaderStyled  style={{display:'flex', alignItems: 'flex-start', color: 'white', padding: '0px'}} width={9}>
         {props.children}
       </GridColumnHeaderStyled>
-      <Grid.Column style={{display:'flex', justifyContent: 'center', width: '100%', alignItems: 'center', color: 'white'}} width={4}>
-        <InputSearchStyled size="large" icon='search' iconPosition='left' placeholder='Buscar en Twitter' />
+      <Grid.Column style={{display:'flex', justifyContent: 'center', width: '100%',  color: 'white'}} width={4}>
+        <Tendencias />
       </Grid.Column>
     </Grid.Row>
     </GridHeaderStyled>
