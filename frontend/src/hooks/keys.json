@@ -1,0 +1,10 @@
+
+{
+    "apiKey": "AIzaSyCgQmJyPmf3fRHQMxi2WRqHFG7bzywCUkA",
+    "authDomain": "merco-web.firebaseapp.com",
+    "databaseURL": "https://merco-web.firebaseio.com",
+    "projectId": "merco-web",
+    "storageBucket": "merco-web.appspot.com",
+    "messagingSenderId": "290035762727",
+    "appId": "1:290035762727:web:f679aec93f76e0fc16f002"
+  }
