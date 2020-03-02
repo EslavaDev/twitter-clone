@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { useSelector, useDispatch } from "react-redux";
-import {  getUserName } from "../store/layout/selectors";
+import { getUserName } from "../store/layout/selectors";
 import { Input } from "semantic-ui-react";
 import { setUserAnonymous } from "../store/layout/actions";
 import { ButtonTwiiter } from "../components/button/styled";
+import { DivContainerIndexStyled } from "./styles";
 
 const Index = () => {
   const [inputUser, setInputUser] = useState();
@@ -14,35 +15,31 @@ const Index = () => {
   useEffect(() => {
     if (userAnonymous) router.push("/home");
   }, []);
-  const handleChangeInput = (e, {value}) =>  setInputUser(value)
+  const handleChangeInput = (e, { value }) => setInputUser(value);
   const handleclick = async () => {
     await dispatch(setUserAnonymous(inputUser));
-    console.log("click");
     await router.push("/home");
   };
   return (
-    <div
-      style={{paddingTop: '5%',
-      color: 'white',
-        flex: 1,
-        backgroundColor: '#16212B',
-        flexDirection: 'column',
-        height: "100vh",
-        width: "100vw",
-        display: "flex",
-        alignItems: "center"
-      }}
-    >
+    <DivContainerIndexStyled>
       <h1>Twitter Clone</h1>
       <h3>By EslavaDev</h3>
-      <br/>
+      <br />
       <span>
-      <h4>Puedes ingresar anonimamente si no ingresas un nombre de usuario</h4>
-      <Input onChange={handleChangeInput} fluid placeholder="Ingresa nombre usuario"></Input>
-      <br/>
-      <ButtonTwiiter fluid onClick={handleclick}>Continuar</ButtonTwiiter>
+        <h4>
+          Puedes ingresar anonimamente si no ingresas un nombre de usuario
+        </h4>
+        <Input
+          onChange={handleChangeInput}
+          fluid
+          placeholder="Ingresa nombre usuario"
+        ></Input>
+        <br />
+        <ButtonTwiiter fluid onClick={handleclick}>
+          Continuar
+        </ButtonTwiiter>
       </span>
-    </div>
+    </DivContainerIndexStyled>
   );
 };
 export default Index;
