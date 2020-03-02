@@ -1,10 +1,11 @@
 import React, {useState} from 'react'
 import { useRouter } from 'next/router'
-import { Button, Menu, Icon } from 'semantic-ui-react'
+import {  Menu, Icon } from 'semantic-ui-react'
 import { DivMenuLeftStyled } from './styles';
 import { useSelector, useDispatch } from 'react-redux';
 import { getActiveBar } from '../../store/layout/selectors';
 import { changeActiveBar } from '../../store/layout/actions';
+import { ButtonTwiiter } from '../button/styled';
 
 
 export const MenuLeft = () => {
@@ -89,7 +90,7 @@ return (
         <Icon name='user outline' />
         Perfil
     </Menu.Item>
-    <Button size="big" fluid >TWITTEAR</Button>
+    <ButtonTwiiter size="big" fluid >TWITTEAR</ButtonTwiiter>
   </Menu>
 
     </DivMenuLeftStyled>

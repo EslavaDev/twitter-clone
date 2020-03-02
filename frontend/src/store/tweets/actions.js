@@ -1,5 +1,5 @@
 import faker from 'faker'
-import { getUserName, getAvatar } from '../layout/selectors';
+import { getUserName, getAvatar, getUuid } from '../layout/selectors';
 
 export const fetchTweets = (data) => ({
   type: '@@TWEETS/FETCH',
@@ -9,8 +9,8 @@ export const fetchTweets = (data) => ({
 export const sendData = (message) => {
 return async (dispatch, getState, { api }) => {
   try{
-    console.log(getUserName(getState()))
     let data = {
+      uuid: getUuid(getState()),
       name: getUserName(getState()),
       message,
       image: getAvatar(getState())

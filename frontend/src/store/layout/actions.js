@@ -1,8 +1,7 @@
-export const setUserAnonymous = () => {
-  console.log('entre aqui nene')
+export const setUserAnonymous = (name) => {
   return{
   type: '@@LAYOUT/SET_USER_ANONYMOUS',
-  payload: false,
+  payload: name,
 }};
 
 export const changeActiveBar = (active) => ({

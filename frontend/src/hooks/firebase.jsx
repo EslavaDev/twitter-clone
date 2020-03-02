@@ -1,7 +1,7 @@
-import firebaseKeys from './keys.json';
-import { useDispatch } from 'react-redux';
 import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import * as firebaseApp from "firebase"
+import firebaseKeys from './keys.json';
 
 const app = !firebaseApp.apps.length ? firebaseApp.initializeApp(firebaseKeys) : firebaseApp.app();
 

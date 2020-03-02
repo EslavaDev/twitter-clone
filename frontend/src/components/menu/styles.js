@@ -13,14 +13,6 @@ export const DivMenuLeftStyled = styled.div`
             float: left;
         }
     }
-    & > .ui.secondary.vertical.menu > .ui.fluid.button {
-        background-color: #1991DA;
-        color: #ffffff;
-        border-radius: 40px;
-        font-size: 13px;
-        padding-top: 15px;
-        padding-bottom: 15px;
-    }
     &>.ui.secondary.menu .active.item{
         color: #1991DA;
 

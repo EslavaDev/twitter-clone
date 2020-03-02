@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Container, Grid, Image, Button} from "semantic-ui-react";
+import { Container, Grid, Image} from "semantic-ui-react";
 import {
   IputTextAreaHeaderStyled,
   GridBoxSendGeaderStyled,
@@ -9,6 +9,7 @@ import {
 } from "./styled";
 import { sendData } from "../../store/tweets/actions";
 import { getAvatar } from "../../store/layout/selectors";
+import { ButtonTwiiter } from "../button/styled";
 
 export const BoxSend = props => {
   const [valueTextArea, setValueTextArea] = useState();
@@ -42,7 +43,7 @@ export const BoxSend = props => {
               value={valueTextArea}
             />
             <ContainterBoxSendButtonsStyled fluid>
-              <Button onClick={handleSend}>Twitterar</Button>
+              <ButtonTwiiter onClick={handleSend}>Twitterar</ButtonTwiiter>
             </ContainterBoxSendButtonsStyled>
           </Grid.Column>
         </Grid.Row>

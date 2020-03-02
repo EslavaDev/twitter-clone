@@ -1,6 +1,9 @@
 export function getInitial(state) {
   return state.layout;
 }
+export function getUuid(state) {
+  return getInitial(state).uuid;
+}
 export function getAvatar(state) {
   return getInitial(state).avatar;
 }

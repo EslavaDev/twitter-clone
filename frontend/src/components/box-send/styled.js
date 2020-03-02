@@ -59,14 +59,6 @@ export const ContainterBoxSendButtonsStyled = styled(Container)`
   align-items: center;
   &.ui.container {
     display: flex;
-    .ui.button {
-      background-color: #1991da;
-      color: #ffffff;
-      border-radius: 40px;
-      font-size: 13px;
-      padding-top: 15px;
-      padding-bottom: 15px;
-    }
   }
 `;
 

@@ -1,4 +1,5 @@
 import faker from 'faker'
+import { v4 as uuidv4 } from 'uuid'; 
 import initialState from './init-state';
 
 export function layoutReducer(
@@ -7,10 +8,11 @@ export function layoutReducer(
 ) {
   switch (action.type) {
     case '@@LAYOUT/SET_USER_ANONYMOUS': {
-      console.log('entre')
+      console.log(action.payload)
       return {
         ...state,
-        userName: faker.name.findName(),
+        uuid: uuidv4(),
+        userName: !!action.payload ? action.payload :faker.name.findName(),
         avatar: faker.image.avatar()
       };
     }
