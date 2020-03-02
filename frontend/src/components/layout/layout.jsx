@@ -1,17 +1,24 @@
   
 import Head from "next/head";
 import { useSelector } from "react-redux";
+import { useRouter } from "next/router";
 import { Image, Grid, Input } from 'semantic-ui-react'
 import Link from "next/link";
 import TT from '../../../public/twitter-image.png'
-import { getSearch } from "../../store/layout/selectors";
+import { getSearch, getUserName } from "../../store/layout/selectors";
 import { GridColumnHeaderStyled, GridHeaderStyled, InputSearchStyled } from "./style";
 import { MenuLeft } from "../menu";
 import { Tendencias } from "../tendencias";
+import { useEffect } from "react";
 
 
 export default function Layout(props) {
+  const router = useRouter()
   const title = useSelector(getSearch)
+  const userAnonymous = useSelector(getUserName)
+  useEffect(() => {
+    if(!userAnonymous) router.push('/')
+  }, [])
   return (
     <div>
       <Head>

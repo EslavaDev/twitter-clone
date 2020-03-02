@@ -11,7 +11,6 @@ export function tweetsReducer(
       Object.keys(action.payload).map(dataItem => {
         dataList.push({uid: dataItem, ...action.payload[dataItem]})
       })
-      console.log(dataList)
       return {
         ...state,
         dataList: dataList.sort((a, b) => b.created - a.created),

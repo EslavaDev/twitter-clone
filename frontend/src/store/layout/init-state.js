@@ -1,7 +1,6 @@
 export default {
-  drawerSidebar: false,
-  cartSidebar: false,
-  appBar: false,
+  avatar: null,
+  userName: null,
   search: 'hello',
   activeBar: 'home'
 };

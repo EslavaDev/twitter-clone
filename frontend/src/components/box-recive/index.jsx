@@ -13,7 +13,7 @@ export const BoxRecive = ({data}) => {
               <Grid.Column width="2">
                 <Image
                   style={{ width: "70px", height: "70px" }}
-                  src="https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                  src={i.image || 'https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500'}
                   fluid
                   circular
                 />

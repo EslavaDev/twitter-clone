@@ -15,7 +15,6 @@ const app = !firebaseApp.apps.length ? firebaseApp.initializeApp(firebaseKeys) :
         listeners.push(
           ref.on('value', snapshot => {
             if(snapshot && snapshot.val){
-              console.log(snapshot.val())
               dispatch(action(snapshot.val()))
             }
           })

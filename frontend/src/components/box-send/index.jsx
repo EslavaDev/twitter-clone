@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import { Container, Grid, Image, Button, Divider } from "semantic-ui-react";
-import TT from "../../../public/twitter-image.png";
+import { useDispatch, useSelector } from "react-redux";
+import { Container, Grid, Image, Button} from "semantic-ui-react";
 import {
   IputTextAreaHeaderStyled,
   GridBoxSendGeaderStyled,
@@ -9,9 +8,11 @@ import {
   DividerBoxSendStyled
 } from "./styled";
 import { sendData } from "../../store/tweets/actions";
+import { getAvatar } from "../../store/layout/selectors";
 
 export const BoxSend = props => {
   const [valueTextArea, setValueTextArea] = useState();
+  const avatar = useSelector(getAvatar)
   const dispatch = useDispatch();
   const handleChange = (e, { value }) => {
     setValueTextArea(value);
@@ -19,6 +20,7 @@ export const BoxSend = props => {
   const handleSend = () => {
     try {
       dispatch(sendData(valueTextArea));
+      setValueTextArea('')
     } catch (error) {}
   };
   return (
@@ -28,7 +30,7 @@ export const BoxSend = props => {
           <Grid.Column width="2">
             <Image
               style={{ width: "70px", height: "70px" }}
-              src="https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              src={avatar}
               fluid
               circular
             />

@@ -1,3 +1,4 @@
+import faker from 'faker'
 import initialState from './init-state';
 
 export function layoutReducer(
@@ -5,22 +6,12 @@ export function layoutReducer(
   action
 ) {
   switch (action.type) {
-    case '@@LAYOUT/DRAWER_SIDEBAR': {
+    case '@@LAYOUT/SET_USER_ANONYMOUS': {
+      console.log('entre')
       return {
         ...state,
-        drawerSidebar: action.payload,
-      };
-    }
-    case '@@LAYOUT/CART_SIDEBAR': {
-      return {
-        ...state,
-        cartSidebar: action.payload,
-      };
-    }
-    case '@@LAYOUT/APP_BAR': {
-      return {
-        ...state,
-        appBar: action.payload,
+        userName: faker.name.findName(),
+        avatar: faker.image.avatar()
       };
     }
     case '@@LAYOUT/SEARCH': {

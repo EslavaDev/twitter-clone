@@ -11,10 +11,8 @@ export class TweetsService extends BaseMicroservice {
 
     async sendTweet(options) {
     const url = `${this.baseUrl}`;
-    console.log(options)
 
     const fetchOptions = await buildHeaders(options);
-    console.log(fetchOptions)
     return fetch(url, { ...fetchOptions, method: 'POST' }).then(
       super.responseToJson
     );
