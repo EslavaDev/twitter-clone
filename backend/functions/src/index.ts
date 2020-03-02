@@ -6,6 +6,7 @@ import * as bodyParser from 'body-parser';
 import * as cors from 'cors';
 import { FirebaseDatabase } from './FirebaseDatabase';
 import { TwittearModel } from './models/twiitear';
+import moment = require('moment');
 
 // // Start writing Firebase Functions
 // // https://firebase.google.com/docs/functions/typescript
@@ -34,7 +35,8 @@ app.post('/twittear', async (req, res) => {
         const twittear = TwittearModel(req.body);
         console.log('*   twittear')
         console.log(twittear)
-        await database.save(`tweets/${uuidv4()}`, twittear)
+        const currentMoment =moment().unix();
+        await database.save(`tweets/${uuidv4()}`, {...twittear, created: currentMoment})
         console.log('*   twittear')
         return res.status(200).json({
             status: 'ok',

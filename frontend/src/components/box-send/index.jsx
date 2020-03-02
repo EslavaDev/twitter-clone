@@ -22,7 +22,7 @@ export const BoxSend = props => {
     } catch (error) {}
   };
   return (
-    <Container>
+    <Container style={{ overflow: "scroll", height: "92vh" }}>
       <GridBoxSendGeaderStyled>
         <Grid.Row style={{ paddingTop: "0px" }}>
           <Grid.Column width="2">

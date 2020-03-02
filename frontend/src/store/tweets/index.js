@@ -6,6 +6,7 @@ export function tweetsReducer(
 ) {
   switch (action.type) {
     case '@@TWEETS/FETCH': {
+      if(!action.payload) return {...state}
       const dataList = [];
       Object.keys(action.payload).map(dataItem => {
         dataList.push({uid: dataItem, ...action.payload[dataItem]})
@@ -13,7 +14,7 @@ export function tweetsReducer(
       console.log(dataList)
       return {
         ...state,
-        dataList,
+        dataList: dataList.sort((a, b) => b.created - a.created),
         dataMap: action.payload,
       };
     }

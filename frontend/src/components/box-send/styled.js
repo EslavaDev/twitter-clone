@@ -5,6 +5,10 @@ export const GridBoxSendGeaderStyled = styled(Grid)`
   &.ui.grid {
     margin: 1rem;
     margin-bottom: 0;
+    ${props =>
+      props.noMargin &&
+      `    margin-left: 0px;
+    margin-right: 0px;`}
   }
 `;
 
@@ -51,27 +55,26 @@ export const IputTextAreaHeaderStyled = styled(TextArea)`
 `;
 
 export const ContainterBoxSendButtonsStyled = styled(Container)`
-    justify-content: flex-end;
-    align-items: center;
-    &.ui.container{
+  justify-content: flex-end;
+  align-items: center;
+  &.ui.container {
     display: flex;
     .ui.button {
-        background-color: #1991DA;
-        color: #ffffff;
-        border-radius: 40px;
-        font-size: 13px;
-        padding-top: 15px;
-        padding-bottom: 15px;
+      background-color: #1991da;
+      color: #ffffff;
+      border-radius: 40px;
+      font-size: 13px;
+      padding-top: 15px;
+      padding-bottom: 15px;
     }
+  }
+`;
 
-    }
-`
-
-export const DividerBoxSendStyled= styled(Divider)`
-&.ui.divider{
-    margin: 0;
-    border-top-width: 5px !important;
-    border-bottom-width: 5px !important;
-    border-color: #253341 !important
-}
-`
+export const DividerBoxSendStyled = styled(Divider)`
+  &.ui.divider {
+    margin: ${props => props.margin ? '1rem 0rem' : '0'} !important;
+    border-top-width: ${props => props.margin ? '1' : '5'}px !important;
+    border-bottom-width: ${props => props.margin ? '1' : '5'}px !important;
+    border-color: #253341 !important;
+  }
+`;
