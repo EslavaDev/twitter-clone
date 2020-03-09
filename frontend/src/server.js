@@ -1,6 +1,7 @@
 import express from 'express';
 import next from 'next';
 import path from 'path';
+import routes  from './routes';
 
 const dev = process.env.NODE_ENV !== 'production'
 const expressApp = express();

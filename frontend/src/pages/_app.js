@@ -15,13 +15,6 @@ const theme = {
 }
 
 export default withRedux(AppStore)(class MyApp extends App {
-  static async getInitialProps({ Component, ctx }) {
-    const pageProps = Component.getInitialProps
-      ? await Component.getInitialProps(ctx)
-      : {};
-    return { pageProps };
-  }
-
 
   render() {
     const { Component, pageProps, store} = this.props

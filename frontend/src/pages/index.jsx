@@ -5,7 +5,7 @@ import { getUserName } from "../store/layout/selectors";
 import { Input } from "semantic-ui-react";
 import { setUserAnonymous } from "../store/layout/actions";
 import { ButtonTwiiter } from "../components/button/styled";
-import { DivContainerIndexStyled } from "./styles";
+import { DivContainerIndexStyled } from "../styles";
 
 const Index = () => {
   const [inputUser, setInputUser] = useState();
