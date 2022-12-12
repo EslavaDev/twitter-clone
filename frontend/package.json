@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/EslavaDev/twitter-clone#readme",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "faker": "^4.1.0",
     "firebase": "^7.9.3",
     "isomorphic-unfetch": "^3.0.0",
